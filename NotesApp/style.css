@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli', 'san-serif';
+    display: flex; 
+    align-items: flex-start;
+    justify-content: flex-start;
+    
+    margin: 0;
+    background-color: 	#916a45;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.note.focus {
+    transform: scale(1.05);
+}
+
+.note {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin: 50px 20px;
+}
+
+#note-area {
+    background-color: 	#ebd8c7;
+    color: #4b2a0b;
+    font-size: 20px;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    resize: none;
+}
+
+#note-area:focus , 
+#note-area:active {
+    outline: none;
+}
+
+.note-label {
+    width: 300p;
+    background-color: #ebd8c7;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 10%;
+    font-size:130%;
+    border: 0.5px solid #916a45;
+}
+
+.far {
+    margin: 0px 3px;
+    color: #4b2a0b;
+    cursor: pointer;
+}
+
+.add-note {
+    margin-left: auto;
+    margin-top: 10px;
+    margin-right: 10px;
+    background-color: #ebd8c7;
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+}
+.add-note:active , 
+.far:hover {
+    transform: scale(0.9);
+}

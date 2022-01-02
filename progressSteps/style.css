@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+:root {
+    --line-border-fil : rgba(214, 72, 193, 0.884) ; 
+    --line-border-empty : rgba(253, 241, 250, 0.993) ; 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', 'san-serif';
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.progress-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    position: relative;
+    max-width: 100%;
+    width: 380px;
+}
+
+.progress-container::before {
+    content: '';
+    background-color: var(--line-border-empty);
+    position: absolute;
+    height: 3px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: -1;
+}
+
+.progress {
+    background-color: var(--line-border-fil);
+    position: absolute;
+    height: 3px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 0%;
+    z-index: -1;
+    transition: 0.4s ease;
+}
+
+.circle  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--line-border-empty);
+    box-sizing: border-box;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--line-border-fil);
+    color:  var(--line-border-fil);
+    font-size: 20px;
+    transition: 0.4s ease;
+}
+
+.circle.active {
+    background-color: var(--line-border-fil);
+    color: var(--line-border-empty);
+    border: 2px solid var(--line-border-empty);
+
+}
+
+.btn {
+    background-color: var(--line-border-fil);
+    color: var(--line-border-empty);
+    border: 0;
+    border-radius: 5px;
+    width: 85px;
+    height: 40px;
+    margin: 10px;
+    font-family: inherit;
+    font-size: 20px;    
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn:disabled{
+    background-color: var(--line-border-empty);
+    color: var(--line-border-fil);
+    cursor: unset;
+}

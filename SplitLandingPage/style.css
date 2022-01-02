@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap');
+
+:root {
+    --left-bg-color : rgba(87, 84 , 236 , 0.3);
+    --right-bg-color : rgba(43, 43 , 43 , 0.3);
+    --hover-width: 75% ; 
+    --other-width: 25% ; 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Roboto', 'san-serif';
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-size: 4rem;
+    color: #fff;
+    white-space: nowrap;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    transform: translateX(-50%);
+}
+
+.btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #fff;
+    white-space: nowrap;
+    top: 40%;
+    left: 20%;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    width: 200px;
+    height: 70px;
+}
+
+.right .btn:hover {
+    box-shadow: 3px 3px 4px rgba(224, 240, 6, 0.863);
+    border-color:rgba(224, 240, 6, 0.863) ;
+}
+
+.left .btn:hover {
+    box-shadow: 3px 3px 4px rgb(192, 105, 243);
+    border-color: rgb(192, 105, 243);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+}
+
+.split {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow:hidden ;
+
+}
+
+.split.left::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--left-bg-color) ; 
+}
+
+.split.right::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--right-bg-color) ; 
+}
+
+.split.left {
+    left: 0;
+    background: url('https://wallpapercave.com/wp/wp6967907.png');
+    background-repeat: no-repeat ;
+    background-size: cover;
+    
+}
+
+.split.right {
+    right: 0;
+    background: url('https://wallpaperscmscwm.azurewebsites.net/20-Years-of-Xbox-Time%20Warp/standard.png?download');
+    background-repeat: no-repeat ;
+    background-size: cover;
+    color: #fff;
+}
+
+.split.left , .split.right , .split.left::before , .split.right::before {
+    transition: all 0.5s ease-in-out;
+}
+
+.hover-left .left {
+    width: var(--hover-width);
+}
+
+.hover-left .right {
+    width: var(--other-width);
+}
+
+.hover-right .left {
+    width: var(--other-width);
+}
+
+.hover-right .right {
+    width: var(--hover-width);
+}
+

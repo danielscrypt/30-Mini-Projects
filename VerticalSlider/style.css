@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Muli', 'san-serif';
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.left-slide {
+    height: 100%;
+    width: 35%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s linear;
+}
+
+.left-slide > div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.right-side {
+    height: 100%;
+    width: 65%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all 0.3s linear;
+}
+
+.right-side > div {
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.action-btns {
+    position: absolute;
+    left: 33%;
+    top: 50%;
+    z-index: 100;
+}
+
+.btn {
+    background-color: inherit;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    outline: none;
+    border: 0.2px solid rgba(51, 51, 51, 0.692);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.down {
+    transform: translateX(-60%)  translateY(60%);
+}
+
+.up:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.548);
+    color: inherit;
+}
+
+
+.down:hover {
+    transform: translateX(-60%)  translateY(60%) scale(1.1);
+    background-color: rgba(255, 255, 255, 0.548);
+    color: inherit;
+}

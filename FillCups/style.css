@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --fill-color : rgba(52, 202, 248, 0.829) ; 
+}
+
+h1 {
+    font-size: 20px;
+    margin: 5px;
+}
+
+h3{
+    font-size: 10px;
+    margin: 5px;
+}
+
+body {
+    font-family: 'Muli', 'san-serif';
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-image: linear-gradient(to top ,  rgb(73, 210, 252) , rgb(111, 209, 255) , rgb(91, 141, 250) , rgb(52, 170, 248));
+}
+
+.big-cup {
+    background-color: rgba(228, 249, 255, 0.842);
+    width: 200px;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0px 20px 20px;
+    border: 1px solid #333;
+    text-align: center;
+    font-size: 25px;
+    overflow: hidden;
+}
+
+.small {
+    font-size: 15px;
+}
+
+.glass {
+    width: 50px;
+    height: 100px;
+    background-color: rgba(228, 249, 255, 0.842);
+    border-radius: 0px 0px 20px 20px;
+    border: 1px solid #333;
+    text-align: center;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    position: relative;
+    transition: 0.5s linear;
+    cursor: pointer;
+}
+
+.glasses {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 300px;
+}
+
+.glass.active {
+    background-color:  var(--fill-color) ;
+    transition: 0.3s ease-in;
+    color: #fff;
+}
+
+.remained {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+    transition: 0.3s ease;
+  }
+  
+
+#precentage {
+    background-color: var(--fill-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 30px;
+    height: 0;
+    transition: 0.3s ease;
+    width: 100%;
+    color: #fff;
+}

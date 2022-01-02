@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" 
+    crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <title>Password Generator</title>
+</head>
+<body>
+
+    <div class="container">
+        <h3>Password Generator</h3>
+        <div class="result" > 
+            <span id="password"></span>
+            <button class="btn clip" id="copy">
+            <i class="fas fa-clipboard" id="clip"></i>
+        </button>
+        </div>
+        <div class="settings">
+        <div class="setting">
+        <label for="length">Password length</label>    
+        <input type="number" name="length" value="10" id="length" min="5" max="20">
+        </div>
+        <div class="setting">
+            <label for="uppercase">uppercase letters</label>
+        <input type="checkbox" name="uppercase" id="uppercase">
+        </div>
+        <div class="setting">
+            <label for="lowercase">lowercase letters</label>
+        <input type="checkbox" name="lowercase" id="lowercase">
+        </div>
+        <div class="setting">
+            <label for="numbers">include numbers</label>
+        <input type="checkbox" name="numbers" id="numbers">
+        </div>
+        <div class="setting">
+            <label for="symbols">include symbols</label>
+        <input type="checkbox" name="symbols" id="symbols">
+        </div>
+</div>
+        <button class="btn btn-large" id="generate">Generate Password</button>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

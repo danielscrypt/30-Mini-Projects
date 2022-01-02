@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+:root {
+    --primary-color: #22254b;
+    --secondary-color: #373b69 ; 
+    --font-color:rgba(255, 255, 255, 0.568) ; 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli', 'san-serif';
+    margin: 0;
+    background-color: var(--primary-color);
+}
+
+header {
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--secondary-color);
+}
+
+.search {
+    background-color: transparent;
+    font-size: 1rem;
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-color);
+    color: rgba(255, 255, 255, 0.568);
+}
+
+.search:focus {
+    outline: none;
+    background-color: var(--primary-color);
+}
+
+.search::placeholder {
+    color: rgba(255, 255, 255, 0.568);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.movie {
+    width: 300px;
+    margin: 1rem;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+    padding: 20px 20px;
+  }
+
+  .movie img {
+      width: 100%;
+  }
+
+  .movie-info {
+      color:var(--font-color) ;
+      font-size: 1.3rem;
+
+  }
+
+  .movie span {
+      font-size: 1rem;
+      padding: 5px 5px ;
+      font-weight: bold;
+      background-color: var(--primary-color);
+      color: rgba(44, 226, 44, 0.966);
+  }
+
+  .overview {
+      color: rgb(14, 13, 13);
+      background-color: #fff;
+      padding: 2rem;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      max-height: 100%;
+      transform: translateY(101%);
+      overflow-y: auto;
+      transition: transform 0.3s ease-in;
+
+  }
+
+  .movie:hover .overview{
+    transform: translateY(0);
+  }
+
+
+  

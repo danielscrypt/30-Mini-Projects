@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', 'san-serif';
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    background-image: linear-gradient(to bottom ,   rgb(243, 138, 40) , rgba(255, 195, 128, 0.979)); 
+}
+/* 
+.container-up {
+    background-color: rgba(255, 205, 131, 0.774);
+    width: 100%;
+    height: 50%;
+    position: relative;
+    display: inline;
+} */
+
+
+
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid #333;
+    padding: 10px 20px;
+    width: 80px;
+    transition: width 0.5s linear;
+
+}
+
+.nav-bar.active {
+    width: 400px;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 0;
+    transition: width 0.5s linear;
+
+}
+
+li {
+    margin: 0 10px;
+    position: relative;
+}
+
+.nav-bar.active ul {
+    width: 100%;
+}
+
+.nav-bar ul li {
+    transform: rotateY(0deg);
+    opacity: 0;
+    transition: transform 0.5s linear;
+    transition: opacity 0.5s linear;
+
+}
+
+.nav-bar.active li {
+    opacity: 1;
+    transform: rotateY(360deg);
+    cursor: pointer;
+}
+
+.nav-bar #close {
+    display: none;
+}
+
+.nav-bar.active #close {
+    display: inline;
+}
+
+.nav-bar.active #open {
+    display: none;
+}
+
+.icon {
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    font-size: 25px;
+    cursor: pointer;
+}
+

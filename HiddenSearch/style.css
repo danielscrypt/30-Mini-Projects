@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', 'san-serif';
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+    background-color: rgba(70, 235, 235, 0.938);
+}
+
+.search-widg {
+    position: relative;
+    height: 50px;
+}
+
+.search-bar {
+    transition: width 0.3s ease-in;
+    border-radius: 10px 0 0 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: teal;
+    background-color: rgb(198, 240, 240);
+    font-size: 17px;
+    letter-spacing: 0.2mm;
+    height: 50px;
+    width: 50px;
+}
+
+.btn {
+    background-color: #fff;
+    border: 0;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    transition: transform 0.3s ease;
+  }
+
+  .btn:focus,
+.search-bar:focus {
+  outline: none;
+}
+
+
+  .search-widg.active .search-bar{ 
+      width: 200px;
+  }
+
+  .search-widg.active .btn{
+      transform: translateX(198px);
+      border-radius: 0 10px 10px 0;
+      background-color: rgb(198, 240, 240);
+      border: solid black;
+      border-left-style:none ;
+      border-width: 0.02mm;
+  }
+  
